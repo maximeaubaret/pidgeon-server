@@ -478,7 +478,7 @@ _server_parse_msg (
     Server *s, 
     Client *c)
 {
-  if (strncmp (c->rx_buff, "/nick", 5) == 0) {
+  if (strncmp (c->rx_buff, "/nick", 5) == 0 && strncmp (c->rx_buff, "/register", 9) == 0) {
     return CLIENT_STATE_NICKNAME;
   }
 
